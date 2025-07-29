@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <title>Usercentrics CSP Test V2</title>
 
-  <!-- ✅ CSP SEM 'unsafe-eval' -->
-  <meta http-equiv="Content-Security-Policy"
-        content="script-src 'self' https://*.usercentrics.eu; connect-src 'self' https://*.usercentrics.eu; img-src 'self' https://*.usercentrics.eu;">
 
-  <!-- ✅ CMP bundle.js script -->
+
+  <meta http-equiv="Content-Security-Policy" content="script-src https://*.usercentrics.eu 'self'; connect-src 'self' https://*.usercentrics.eu; img-src 'self' https://*.usercentrics.eu;">
+
  
     <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/bundle.js" data-settings-id="9S0YpI7VSssd1D" async></script>
 
