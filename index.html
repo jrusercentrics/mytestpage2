@@ -2,25 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Usercentrics CSP Test V2</title>
+  <title>Usercentrics CMP V3 - CSP Test with Nonce</title>
 
+  <!-- CSP segura que só permite scripts de Usercentrics com o nonce correto -->
+  <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' https://*.usercentrics.eu 'nonce-abc123'; 
+                 connect-src https://*.usercentrics.eu; 
+                 img-src 'self' data: https://*.usercentrics.eu;">
 
+  <!-- Script CMP V3 com o nonce correspondente -->
+  <script id="usercentrics-cmp"
+          nonce="abc123"
+          src="https://web.cmp.usercentrics.eu/ui/loader.js"
+          data-settings-id="9S0YpI7VSssd1D"
+          async></script>
 
- <meta http-equiv="Content-Security-Policy" content="script-src https://*.usercentrics.eu 'self'; connect-src 'self' https://*.usercentrics.eu; img-src 'self' https://*.usercentrics.eu;">
-
- 
-    <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/bundle.js" data-settings-id="9S0YpI7VSssd1D" async></script>
-
-
-   <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="9S0YpI7VSssd1D" async></script>
-
-  <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/bundle.js" data-settings-id="9S0YpI7VSssd1D" async></script>
-  
 </head>
 <body>
-
-  <h1>Usercentrics CMP CSP Test</h1>
-  <p>This page uses CMP v3 with a strict CSP and no 'unsafe-eval'.</p>
-
+  <h1>Teste CSP com CMP V3 e nonce</h1>
+  <p>Verifique no DevTools se o script carregou sem violar a política CSP.</p>
 </body>
 </html>
