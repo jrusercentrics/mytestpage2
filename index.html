@@ -4,18 +4,7 @@
   <meta charset="UTF-8">
   <title>Usercentrics CMP V3 - CSP Test with Nonce</title>
 
-  <!-- CSP segura que só permite scripts de Usercentrics com o nonce correto -->
-  <meta http-equiv="Content-Security-Policy"
-        content="script-src 'self' https://*.usercentrics.eu 'nonce-abc123'; 
-                 connect-src https://*.usercentrics.eu; 
-                 img-src 'self' data: https://*.usercentrics.eu;">
-
-  <!-- Script CMP V3 com o nonce correspondente -->
-  <script id="usercentrics-cmp"
-          nonce="abc123"
-          src="https://web.cmp.usercentrics.eu/ui/loader.js"
-          data-settings-id="9S0YpI7VSssd1D"
-          async></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e2769309-3672-42d4-bc3f-d56333e6a880" data-blockingmode="auto" type="text/javascript"></script>
 
 </head>
 <body>
